@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fangzhu.bigdata</groupId>
+	<artifactId>datastream</artifactId>
+	<version>1.0</version>
+	<name>BigData Storm DataFlow</name>
+	<description>BigData Storm For Data Flow</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba.jstorm</groupId>
+			<artifactId>jstorm-core</artifactId>
+			<version>2.1.0</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<!--kafka -->
+		<dependency>
+			<groupId>org.apache.storm</groupId>
+			<artifactId>storm-kafka</artifactId>
+			<version>0.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.11</artifactId>
+			<version>0.8.2.2</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>com.101tec</artifactId>
+					<groupId>zkclient</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--command parser -->
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.48</version>
+		</dependency>
+
+		<!--util -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.7</version>
+		</dependency>
+
+		<!-- canal client -->
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.client</artifactId>
+			<version>1.0.21</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.alibaba.otter</groupId>
+					<artifactId>canal.common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- canal embedded -->
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.instance.core</artifactId>
+			<version>1.0.21</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.alibaba.otter</groupId>
+					<artifactId>canal.common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.dianwoba.bigdata</groupId>
+			<artifactId>canal.common.dev</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.instance.spring</artifactId>
+			<version>1.0.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.instance.manager</artifactId>
+			<version>1.0.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.server</artifactId>
+			<version>1.0.21</version>
+		</dependency>
+
+	</dependencies>
+
+	<build/>
+</project>
